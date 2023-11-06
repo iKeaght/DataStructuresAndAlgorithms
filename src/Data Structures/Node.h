@@ -1,9 +1,13 @@
 #pragma once
-#include <iostream>
-struct Node {
+class Node {
+public:
 	int data;
-	struct Node* left;
-	struct Node* right;
+	Node* left;
+	Node* right;
+
+	Node(int value);
+	/*void displayInorder(Node* root);
+	void displayPreorder(Node* root);
+	void displayPostorder(Node* root);*/
 };
 
-struct Node* newNode(int data);
