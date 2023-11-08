@@ -128,11 +128,13 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="src\Data Structures\Node.cpp" />
+    <ClCompile Include="src\Data Structures\Tree\Tree.cpp" />
     <ClCompile Include="src\main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Data Structures\Graph.h" />
-    <ClInclude Include="src\Data Structures\Tree.h" />
+    <ClInclude Include="src\Data Structures\Tree\BinaryTree.h" />
+    <ClInclude Include="src\Data Structures\Tree\Tree.h" />
     <ClInclude Include="src\Data Structures\Node.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
