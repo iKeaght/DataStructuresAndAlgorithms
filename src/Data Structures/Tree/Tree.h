@@ -2,8 +2,8 @@
 #include "../Node.h"
 class Tree {
 public:
-	void displayInorder(Node* node);
-	void displayPreorder(Node* node);
-	void displayPostorder(Node* node);;
+	void DisplayInOrder(Node* node);
+	void DisplayPreOrder(Node* node);
+	void DisplayPostOrder(Node* node);;
 };
 
