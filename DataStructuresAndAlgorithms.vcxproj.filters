@@ -18,18 +18,21 @@
     <ClCompile Include="src\main.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="src\Data Structures\Node.cpp">
+    <ClCompile Include="src\Data Structures\Tree\Node.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
     <ClCompile Include="src\Data Structures\Tree\Tree.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
+    <ClCompile Include="src\Data Structures\Graph\Graph.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\Data Structures\Graph.h">
+    <ClInclude Include="src\Data Structures\Graph\Graph.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="src\Data Structures\Node.h">
+    <ClInclude Include="src\Data Structures\Tree\Node.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
     <ClInclude Include="src\Data Structures\Tree\Tree.h">

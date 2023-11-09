@@ -1,5 +1,5 @@
 #pragma once
-#include "../Node.h"
+#include "Node.h"
 class Tree {
 public:
 	void DisplayInOrder(Node* node);

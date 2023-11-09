@@ -1,5 +1,6 @@
 #include "Tree.h"
 #include <iostream>
+
 void Tree::DisplayInOrder(Node* node) {
 	if (node == NULL) {
 		return;
