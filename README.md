@@ -1,11 +1,13 @@
 # DataStructuresAndAlgorithms
-It is a personal project that I created during my learning of datastructures and algorithms.
-After learning the theory, I wanted to learn by praticing !
+It is a personal project I created while learning about data structures and algorithms.\n
+After learning theory, I wanted to learn by praticing !
 
 # How to use 
-You can clone the repo and use a lot of algorithms of various datastructures.
+You can clone the repository and use a large number of algorithms on various data structures.
 
 ## Search algorithms
+You can use the following algorithms : 
+ - Linear Search
 
 
 ## Sorting algorithm
