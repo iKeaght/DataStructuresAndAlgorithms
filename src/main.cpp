@@ -11,9 +11,9 @@ int main()
     int size = sizeof(array) / sizeof(array[0]);
     int x = 10;
 
-    int resultVector = SearchAlgorithms::LinearSearch(vect, x);
-    int resultArray = SearchAlgorithms::LinearSearch(array, size, x);
-    int resultstdArray = SearchAlgorithms::LinearSearch(stdarray, x);
+    int resultVector = SearchAlgorithms::BinarySearch(vect, x);
+    int resultArray = SearchAlgorithms::BinarySearch(array, size, x);
+    int resultstdArray = SearchAlgorithms::BinarySearch(stdarray, x);
     std::cout << resultVector << std::endl;
     std::cout << resultArray << std::endl;
     std::cout << resultstdArray << std::endl;

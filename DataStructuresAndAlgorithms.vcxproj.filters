@@ -47,5 +47,8 @@
     <ClInclude Include="src\Algorithms\SearchAlgorithms.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
+    <ClInclude Include="src\Algorithms\Utils.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
