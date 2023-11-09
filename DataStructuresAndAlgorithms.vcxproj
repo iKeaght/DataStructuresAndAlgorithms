@@ -127,12 +127,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\Algorithms\SearchAlgorithms.cpp" />
     <ClCompile Include="src\Data Structures\Graph\Graph.cpp" />
     <ClCompile Include="src\Data Structures\Tree\Node.cpp" />
     <ClCompile Include="src\Data Structures\Tree\Tree.cpp" />
     <ClCompile Include="src\main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\Algorithms\SearchAlgorithms.h" />
     <ClInclude Include="src\Data Structures\Graph\Graph.h" />
     <ClInclude Include="src\Data Structures\Tree\BinaryTree.h" />
     <ClInclude Include="src\Data Structures\Tree\Tree.h" />

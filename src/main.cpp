@@ -1,16 +1,14 @@
 
 #include <iostream>
-#include "Data Structures/Graph/Graph.h"
+#include "Algorithms/SearchAlgorithms.h"
 
 int main()
 {
-	Graph graph(4);
-	graph.AddEgde(1, 2, false);
-	graph.AddEgde(4, 2, true);
-	graph.AddEgde(1, 3, true);
-	graph.AddEgde(4, 3, false);
-	graph.AddEgde(1, 4, false);
-	graph.DisplayGraph();
+    int arr[] = { 2, 3, 4, 10, 40 };
+    int x = 10;
+    int N = sizeof(arr) / sizeof(arr[0]);
+
+    int result = SearchAlgorithms::LinearSearch(arr, N, x);
 }
 
 
