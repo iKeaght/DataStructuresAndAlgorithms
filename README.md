@@ -1,5 +1,5 @@
-# DataStructuresAndAlgorithms
-It is a personal project I created while learning about data structures and algorithms.\n
+# About the repository
+It is a personal project I created while learning about data structures and algorithms.<br>
 After learning theory, I wanted to learn by praticing !
 
 # How to use 
