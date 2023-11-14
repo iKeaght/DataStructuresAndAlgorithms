@@ -4,12 +4,15 @@
 #include <map>
 class Graph {
 public:
-	std::map<int, bool> visited;
+	bool* visited;
 	std::map<int, std::list<int> > adj;
+	int numVertices;
+	Graph(int vertices);
 	void AddEgde(int origin, int vertex, bool bidirectional);
-	void DisplayGraph();
 	void DepthFirstSearch(int vertex);
 	bool DepthFirstSearch(int vertex, int needle);
+	void ResetVisited();
 	void BreadthFirstSearch(int vertex);
+	bool BreadthFirstSearch(int vertex, int needle);
 };
 
