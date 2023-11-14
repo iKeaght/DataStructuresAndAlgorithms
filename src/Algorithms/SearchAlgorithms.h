@@ -2,10 +2,11 @@
 #include <iostream>
 #include <vector>
 #include <array>
+#include "../Data Structures/Graph/Graph.h"
+#include "../Data Structures/Tree/Tree.h"
 
 namespace SearchAlgorithms {
 #pragma region LinearSearch
-
 	int LinearSearch(std::vector<int>& vect, int needle);
 
 	int LinearSearch(int array[], int size, int needle);

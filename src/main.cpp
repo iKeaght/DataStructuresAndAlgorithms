@@ -1,23 +1,21 @@
 
 #include <iostream>
+#include "Data Structures/Graph/Graph.h"
 #include "Algorithms/SearchAlgorithms.h"
 #include <array>
 
 int main()
 {
-    std::vector<int> vect = { 2, 3, 4, 10, 40 };
-    int array[] = { 2, 3, 4, 10, 40 };
-    std::array<int, 5> stdarray = { 2, 3, 4, 10, 40 };
-    int size = sizeof(array) / sizeof(array[0]);
-    int x = 10;
-
-    int resultVector = SearchAlgorithms::BinarySearch(vect, x);
-    int resultArray = SearchAlgorithms::BinarySearch(array, size, x);
-    int resultstdArray = SearchAlgorithms::BinarySearch(stdarray, x);
-    std::cout << resultVector << std::endl;
-    std::cout << resultArray << std::endl;
-    std::cout << resultstdArray << std::endl;
-   
+    Graph graph;
+    graph.AddEgde(0, 1, true);
+    graph.AddEgde(0, 2, true);
+    graph.AddEgde(1, 2, true);
+    graph.AddEgde(2, 0, true);
+    graph.AddEgde(2, 3, true);
+    graph.AddEgde(3, 3, true);
+    graph.DepthFirstSearch(2, 0);
+    
+    
 }
 
 

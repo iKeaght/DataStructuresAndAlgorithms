@@ -1,6 +1,6 @@
 #include "SearchAlgorithms.h"
-namespace SearchAlgorithms {
 
+namespace SearchAlgorithms {
 #pragma region Linear Search
 	int LinearSearch(std::vector<int>& vect, int needle) {
 		for (int i = 0; i < vect.size(); i++) {
@@ -65,9 +65,9 @@ namespace SearchAlgorithms {
 		} while (low < high);
 		return -1;
 	}
-
-
 #pragma endregion
+
+
 }
 
 
