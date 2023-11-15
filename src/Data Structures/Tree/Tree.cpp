@@ -1,5 +1,6 @@
 #include "Tree.h"
 #include <iostream>
+#include <queue>
 
 void Tree::DisplayInOrder(Node* node) {
 	if (node == NULL) {
@@ -32,3 +33,22 @@ void Tree::DisplayPostOrder(Node* node) {
 	DisplayPostOrder(node->right);
 	std::cout << node->data << " ";
 }
+
+void Tree::DisplayLevelOrder(Node* node)
+{
+	std::queue<Node*>queue;
+	queue.push(node);
+	while (queue.empty() == false) {
+		Node* node = queue.front();
+		std::cout << node->data << " ";
+		queue.pop();
+		if (node->left != NULL) {
+			queue.push(node->left);
+		}
+		if (node->right != NULL) {
+			queue.push(node->right);
+		}
+	}
+}
+
+
