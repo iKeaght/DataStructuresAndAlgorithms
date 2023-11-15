@@ -43,7 +43,7 @@ namespace SearchAlgorithms {
 
 		} while (low < high);
 		return -1;
-}
+	}
 
 	int BinarySearch(std::vector<int>& vect, int needle) {
 		int low = 0;
@@ -66,8 +66,18 @@ namespace SearchAlgorithms {
 		return -1;
 	}
 #pragma endregion
+	int LongestCommonSubsequence(std::string string1, std::string string2, int len_1, int len_2) {
+		if (len_1 == 0 || len_2 == 0) {
+			return 0;
+		}
+		if (string1[len_1 - 1] == string2[len_2 - 1]) {
+			return 1 + LongestCommonSubsequence(string1, string2, len_1 - 1, len_2 - 1);
+		}
+		else {
+			return std::max(LongestCommonSubsequence(string1, string2, len_1 - 1, len_2),
+				LongestCommonSubsequence(string1, string2, len_1, len_2 - 1));
 
 
+		}
+	}
 }
-
-

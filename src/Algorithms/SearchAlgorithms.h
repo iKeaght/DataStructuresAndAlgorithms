@@ -52,5 +52,6 @@ namespace SearchAlgorithms {
 	}
 #pragma endregion
 
+	int LongestCommonSubsequence(std::string string1, std::string string2, int len_1, int len_2);
 
 }
