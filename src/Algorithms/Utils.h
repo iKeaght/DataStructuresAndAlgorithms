@@ -13,6 +13,15 @@ namespace Utils {
 		std::cout << "\n";
 	};
 
+	template<typename T>
+	void PrintArray(const T *array, int size) {
+		for (int i = 0; i < size; i++)
+		{
+			std::cout << array[i] << "  ";
+		}
+		std::cout << "\n";
+	};
+
 	template<typename T, size_t size>
 	void PrintArraySTD(const std::array<T, size> &array) {
 		for (int i = 0; i < size; i++)

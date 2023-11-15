@@ -72,8 +72,67 @@ namespace SortAlgorithms {
 		return outputVector;
 	}
 
-	void HeapSort()
+	void HeapifyMaxHeap(int *array, int size, int index)
 	{
+		int largest_value = index;
+		int left = 2 * largest_value + 1;
+		int right = 2 * largest_value + 2;
+
+		if (left < size && array[left] > array[largest_value]) {
+			largest_value = left;
+		}
+		if (right < size && array[right] > array[largest_value]) {
+			largest_value = right;
+		}
+
+		if (largest_value != index) {
+			Utils::Swap(array[index], array[largest_value]);
+			HeapifyMaxHeap(array, size, largest_value);
+		}
+	}
+
+	void HeapifyMinHeap(int* array, int size, int index)
+	{
+		int largest_value = index;
+		int left = 2 * largest_value + 1;
+		int right = 2 * largest_value + 2;
+
+		if (left < size && array[left] < array[largest_value]) {
+			largest_value = left;
+		}
+		if (right < size && array[right] < array[largest_value]) {
+			largest_value = right;
+		}
+
+		if (largest_value != index) {
+			Utils::Swap(array[index], array[largest_value]);
+			HeapifyMinHeap(array, size, largest_value);
+		}
+	}
+
+	void HeapSortMaxHeap(int* array, int size)
+	{
+		for (int i = size / 2 - 1; i >= 0; i--) {
+			HeapifyMaxHeap(array, size, i);
+		}
+
+		for (int i = size - 1; i >= 0; i--) {
+			Utils::Swap(array[0], array[i]);
+
+			HeapifyMaxHeap(array, i, 0);
+		}
+	}	
+	void HeapSortMinHeap(int* array, int size)
+	{
+		for (int i = size / 2 - 1; i >= 0; i--) {
+			HeapifyMinHeap(array, size, i);
+		}
+
+		for (int i = size - 1; i >= 0; i--) {
+			Utils::Swap(array[0], array[i]);
+
+			HeapifyMinHeap(array, i, 0);
+		}
 	}
 
 	void InsertionSort()
