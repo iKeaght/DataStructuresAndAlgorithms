@@ -130,7 +130,6 @@
   <ItemGroup>
     <ClCompile Include="src\Algorithms\SearchAlgorithms.cpp" />
     <ClCompile Include="src\Algorithms\SortAlgorithms.cpp" />
-    <ClCompile Include="src\Algorithms\Utils.cpp" />
     <ClCompile Include="src\Data Structures\Graph\Graph.cpp" />
     <ClCompile Include="src\Data Structures\Tree\Node.cpp" />
     <ClCompile Include="src\Data Structures\Tree\Tree.cpp" />

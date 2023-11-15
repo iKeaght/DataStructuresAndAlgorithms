@@ -4,7 +4,7 @@
 namespace SortAlgorithms {
 
 	void BubbleSort(int array[], int size, bool ascending);
-	void BucketSort();
+	void BucketSort(float* array, int size);
 	void CountingSort();
 	void HeapSort();
 	void InsertionSort();

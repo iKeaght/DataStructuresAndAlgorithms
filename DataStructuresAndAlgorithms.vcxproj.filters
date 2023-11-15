@@ -33,9 +33,6 @@
     <ClCompile Include="src\Algorithms\SortAlgorithms.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="src\Algorithms\Utils.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Data Structures\Graph\Graph.h">

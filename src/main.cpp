@@ -2,14 +2,16 @@
 #include <iostream>
 #include "Algorithms/Utils.h"
 #include "Algorithms/SortAlgorithms.h"
+#include <array>
 int main()
 {
-    int data[]{ -2, 45, 0, 11, -9 };
-    int size = sizeof(data) / sizeof(data[0]);
-   
-    SortAlgorithms::BubbleSort(data, size, false);
-    std::cout << "Sorted Array in Ascending Order:\n";
-    Utils::PrintArray(data);
+	int size = 10;
+	float arr[] = { 0.25, 0.36, 0.58, 0.41, 0.29, 0.22, 0.45, 0.79, 0.01, 0.69 };
+	std::cout << "Array before Sorting: ";
+	Utils::PrintArray(arr);
+	SortAlgorithms::BucketSort(arr, size);
+	std::cout << "Array after Sorting: ";
+	Utils::PrintArray(arr);
 }
 
 
