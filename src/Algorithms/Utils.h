@@ -1,6 +1,7 @@
 #pragma once
 #include <iostream>
 #include <array>
+#include <vector>
 namespace Utils {
 
 	template<typename T, size_t size>
@@ -21,6 +22,13 @@ namespace Utils {
 		std::cout << "\n";
 	};
 
+	template<typename T>
+	void PrintVector(const std::vector<T>& vect) {
+		for (int i = 0; i < vect.size(); i++) {
+			std::cout << vect[i] << " ";
+		}
+		std::cout << "\n";
+	}
 
 	template <typename T>
 	void Swap(T& x, T& y) {
