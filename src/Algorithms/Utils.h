@@ -1,10 +1,13 @@
 #pragma once
-namespace utils {
+#include <iostream>
+namespace Utils {
+	void PrintArray(int array[], int size);
 
-template <typename T>
-void swap(T& x, T& y) {
-	T temp = x;
-	x = y;
-	y = temp
-}
+	template <typename T>
+	void Swap(T& x, T& y) {
+		T temp = x;
+		x = y;
+		y = temp;
+	}
+
 }

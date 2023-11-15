@@ -1,29 +1,15 @@
 
 #include <iostream>
-#include "Data Structures/Tree/Tree.h"
-#include "Algorithms/SearchAlgorithms.h"
-#include <array>
-
+#include "Algorithms/Utils.h"
+#include "Algorithms/SortAlgorithms.h"
 int main()
 {
-    Tree tree;
-    Node* root = new Node(1);
-    root->left = new Node(2);
-    root->right = new Node(3);
-    root->left->left = new Node(4);
-    root->left->right = new Node(5);
-    root->right->left = new Node(6);
-    root->right->right = new Node(7);
-    std::cout << "Inorder traversal of binary tree is : " << std::endl;
-    tree.DisplayInOrder(root);
-    std::cout << "\nPreorder traversal of binary tree is : " << std::endl;
-    tree.DisplayPreOrder(root);
-    std::cout << "\nPostorder traversal of binary tree is : " << std::endl;
-    tree.DisplayPostOrder(root);
-    std::cout << "\nLevel order traversal of binary tree is : " << std::endl;
-    tree.DisplayLevelOrder(root);
+    int data[5]{ -2, 45, 0, 11, -9 };
+    int size = sizeof(data) / sizeof(data[0]);
+   
+    SortAlgorithms::BubbleSort(data, size, true);
+    std::cout << "Sorted Array in Ascending Order:\n";
+    Utils::PrintArray(data, size);
 }
-    
-
 
 
