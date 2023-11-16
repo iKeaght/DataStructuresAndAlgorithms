@@ -11,7 +11,8 @@ namespace SortAlgorithms {
 	void HeapSortMaxHeap(int *array, int size);
 	void HeapSortMinHeap(int *array, int size);
 	void InsertionSort(int *array, int size, bool ascending);
-	void MergeSort();
+	void Merge(int* array, const int left, const int mid, const int right);
+	void MergeSort(int* array, const int begin, const int end);
 	void QuickSort();
 	void RadixSort();
 	void SelectionSort();

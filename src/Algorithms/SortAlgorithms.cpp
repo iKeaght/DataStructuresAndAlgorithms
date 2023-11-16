@@ -157,9 +157,69 @@ namespace SortAlgorithms {
 		}
 	}
 
-	void MergeSort()
+	void Merge(int* array, const int left, const int mid, const int right)
 	{
+		const int subArrayOne = mid - left + 1;
+		const int subArrayTwo = right - mid;
+
+		//temp
+		auto* leftArray = new int[subArrayOne];
+		auto* rightArray = new int[subArrayTwo];
+		for (auto i = 0; i < subArrayOne; i++) {
+			leftArray[i] = array[left + i];
+		}for (auto j = 0; j < subArrayTwo; j++) {
+			rightArray[j] = array[mid + 1 + j];
+		}
+
+		auto indexOfSubArrayOne = 0, indexOfSubArrayTwo = 0;
+		int indexOfMergedArray = left;
+
+
+		// Merge the temp arrays back into array[left..right]
+		while (indexOfSubArrayOne < subArrayOne && indexOfSubArrayTwo < subArrayTwo) {
+			if (leftArray[indexOfSubArrayOne] <= rightArray[indexOfSubArrayTwo]) {
+				array[indexOfMergedArray] = leftArray[indexOfSubArrayOne];
+				indexOfSubArrayOne++;
+			}
+			else {
+				array[indexOfMergedArray] = rightArray[indexOfSubArrayTwo];
+				indexOfSubArrayTwo++;
+			}
+			indexOfMergedArray++;
+		}
+		// Copy the remaining elements of
+		// left[], if there are any
+		while (indexOfSubArrayOne < subArrayOne) {
+			array[indexOfMergedArray] = leftArray[indexOfSubArrayOne];
+			indexOfSubArrayOne++;
+			indexOfMergedArray++;
+		}
+
+		// Copy the remaining elements of
+		// right[], if there are any
+		while (indexOfSubArrayTwo < subArrayTwo) {
+			array[indexOfMergedArray] = rightArray[indexOfSubArrayTwo];
+			indexOfSubArrayTwo++;
+			indexOfMergedArray++;
+		}
+
+		delete[] leftArray;
+		delete[] rightArray;
 	}
+
+	void MergeSort(int* array, const int begin, const int end)
+	{
+		if (begin >= end) {
+			return;
+		}
+
+		int mid = begin + (end - begin) / 2;
+		MergeSort(array, begin, mid);
+		MergeSort(array, mid + 1, end);
+		Merge(array, begin, mid, end);
+	}
+
+	
 
 	void QuickSort()
 	{
