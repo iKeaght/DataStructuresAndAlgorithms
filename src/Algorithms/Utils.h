@@ -14,7 +14,7 @@ namespace Utils {
 	};
 
 	template<typename T>
-	void PrintArray(const T *array, int size) {
+	void PrintArray(const T* array, int size) {
 		for (int i = 0; i < size; i++)
 		{
 			std::cout << array[i] << "  ";
@@ -23,7 +23,7 @@ namespace Utils {
 	};
 
 	template<typename T, size_t size>
-	void PrintArraySTD(const std::array<T, size> &array) {
+	void PrintArraySTD(const std::array<T, size>& array) {
 		for (int i = 0; i < size; i++)
 		{
 			std::cout << array[i] << "  ";
@@ -44,6 +44,16 @@ namespace Utils {
 		T temp = x;
 		x = y;
 		y = temp;
+	}
+	template<typename T>
+	int GetMax(T* array, int size) {
+		int max = array[0];
+		for (int i = 1; i < size; i++) {
+			if (array[i] > max) {
+				max = array[i];
+			}
+			return max;
+		}
 	}
 
 }

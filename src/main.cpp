@@ -6,11 +6,11 @@
 
 int main()
 {
-	int arr[] = { 12, 11, 13, 5, 6, 7, 14 };
+	int arr[] = { 543, 986, 217, 765, 329 };
 	int arr_size = sizeof(arr) / sizeof(arr[0]);
 	std::cout << "Given array is : \n";
 	Utils::PrintArray(arr);
-	SortAlgorithms::QuickSort(arr, 0, arr_size - 1);
+	SortAlgorithms::RadixSort(arr, arr_size);
 	std::cout << "\nSorted array is \n";
 	Utils::PrintArray(arr);
 
