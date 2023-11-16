@@ -219,10 +219,39 @@ namespace SortAlgorithms {
 		Merge(array, begin, mid, end);
 	}
 
+	int Partition(int* array, int low, int high)
+	{
+		int pivot = array[low];
+		int i = low;
+		int j = high;
+		while (i < j) {
+
+			while (array[i] <= pivot) {
+				i++;
+			}
+
+			while (array[j] > pivot) {
+				j--;
+			}
+
+			if (i < j) {
+				Utils::Swap(array[i], array[j]);
+			}
+
+		}
+		Utils::Swap(array[low], array[j]);
+		return j;
+	}
+
 	
 
-	void QuickSort()
+	void QuickSort(int *array, int low, int high)
 	{
+		if (low < high) {
+			int pivot = Partition(array, low, high);
+			QuickSort(array, low, pivot - 1);
+			QuickSort(array, pivot + 1, high);
+		}
 	}
 
 	void RadixSort()

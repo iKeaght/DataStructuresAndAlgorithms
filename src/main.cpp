@@ -10,7 +10,7 @@ int main()
 	int arr_size = sizeof(arr) / sizeof(arr[0]);
 	std::cout << "Given array is : \n";
 	Utils::PrintArray(arr);
-	SortAlgorithms::MergeSort(arr, 0, arr_size - 1);
+	SortAlgorithms::QuickSort(arr, 0, arr_size - 1);
 	std::cout << "\nSorted array is \n";
 	Utils::PrintArray(arr);
 

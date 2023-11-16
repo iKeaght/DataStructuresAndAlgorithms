@@ -13,7 +13,8 @@ namespace SortAlgorithms {
 	void InsertionSort(int *array, int size, bool ascending);
 	void Merge(int* array, const int left, const int mid, const int right);
 	void MergeSort(int* array, const int begin, const int end);
-	void QuickSort();
+	int Partition(int* array, int low, int high);
+	void QuickSort(int* array, int low, int high);
 	void RadixSort();
 	void SelectionSort();
 	void ShellSort();
