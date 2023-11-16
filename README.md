@@ -3,7 +3,8 @@ It is a personal project I created while learning about data structures and algo
 After learning theory, I wanted to learn by praticing !
 
 # How to use 
-You can clone the repository and use a large number of algorithms on various data structures.
+You can clone the repository and use a large number of algorithms on various data structures.<br>
+Write you code directly inside main.cpp.
 
 ## Search algorithms
 You can use the following algorithms : 
