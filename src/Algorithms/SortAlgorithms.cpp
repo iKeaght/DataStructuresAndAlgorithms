@@ -72,7 +72,7 @@ namespace SortAlgorithms {
 		return outputVector;
 	}
 
-	void HeapifyMaxHeap(int *array, int size, int index)
+	void HeapifyMaxHeap(int* array, int size, int index)
 	{
 		int largest_value = index;
 		int left = 2 * largest_value + 1;
@@ -121,7 +121,7 @@ namespace SortAlgorithms {
 
 			HeapifyMaxHeap(array, i, 0);
 		}
-	}	
+	}
 	void HeapSortMinHeap(int* array, int size)
 	{
 		for (int i = size / 2 - 1; i >= 0; i--) {
@@ -243,9 +243,9 @@ namespace SortAlgorithms {
 		return j;
 	}
 
-	
 
-	void QuickSort(int *array, int low, int high)
+
+	void QuickSort(int* array, int low, int high)
 	{
 		if (low < high) {
 			int pivot = Partition(array, low, high);
@@ -272,7 +272,7 @@ namespace SortAlgorithms {
 			output[count[(array[i] / exp) % 10] - 1] = array[i];
 			count[(array[i] / exp) % 10]--;
 		}
-		
+
 		for (i = 0; i < size; i++) {
 			array[i] = output[i];
 		}
@@ -281,7 +281,7 @@ namespace SortAlgorithms {
 	void RadixSort(int* array, int size)
 	{
 		int max = Utils::GetMax(array, size);
-		for(int exp = 1; max/exp > 0; exp *=10){
+		for (int exp = 1; max / exp > 0; exp *= 10) {
 			CountSortRadix(array, size, exp);
 		}
 	}
@@ -289,13 +289,13 @@ namespace SortAlgorithms {
 	void SelectionSort(int* array, int size)
 	{
 		int i, j, min_index;
-		for (i= 0; i < size - 1; i++) {
+		for (i = 0; i < size - 1; i++) {
 			min_index = i;
-			for (j = i+ 1; j < size;j++) {
+			for (j = i + 1; j < size; j++) {
 				if (array[j] < array[min_index]) {
 					min_index = j;
 				}
-				
+
 			}
 			if (min_index != i) {
 				Utils::Swap(array[min_index], array[i]);
@@ -303,7 +303,18 @@ namespace SortAlgorithms {
 		}
 	}
 
-	void ShellSort()
+	void ShellSort(int* array, int size)
 	{
+		// Rearrange elements at each n/2, n/4, n/8, ... intervals
+		for (int interval = size / 2; interval > 0; interval /= 2) {
+			for (int i = interval; i < size; i += 1) {
+				int temp = array[i];
+				int j;
+				for (j = i; j >= interval && array[j - interval] > temp; j -= interval) {
+					array[j] = array[j - interval];
+				}
+				array[j] = temp;
+			}
+		}
 	}
 }
