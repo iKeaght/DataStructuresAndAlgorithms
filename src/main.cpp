@@ -10,7 +10,7 @@ int main()
 	int arr_size = sizeof(arr) / sizeof(arr[0]);
 	std::cout << "Given array is : \n";
 	Utils::PrintArray(arr);
-	SortAlgorithms::RadixSort(arr, arr_size);
+	SortAlgorithms::SelectionSort(arr, arr_size);
 	std::cout << "\nSorted array is \n";
 	Utils::PrintArray(arr);
 

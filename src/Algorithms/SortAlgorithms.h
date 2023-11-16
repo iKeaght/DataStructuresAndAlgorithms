@@ -17,7 +17,7 @@ namespace SortAlgorithms {
 	void QuickSort(int* array, int low, int high);
 	void CountSortRadix(int* array, int size, int exp);
 	void RadixSort(int* array, int size);
-	void SelectionSort();
+	void SelectionSort(int* array, int size);
 	void ShellSort();
 
 
