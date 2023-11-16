@@ -10,7 +10,7 @@ namespace SortAlgorithms {
 	void HeapifyMinHeap(int *array, int size, int index);
 	void HeapSortMaxHeap(int *array, int size);
 	void HeapSortMinHeap(int *array, int size);
-	void InsertionSort();
+	void InsertionSort(int *array, int size, bool ascending);
 	void MergeSort();
 	void QuickSort();
 	void RadixSort();

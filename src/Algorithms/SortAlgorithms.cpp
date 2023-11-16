@@ -135,8 +135,26 @@ namespace SortAlgorithms {
 		}
 	}
 
-	void InsertionSort()
+	void InsertionSort(int* array, int size, bool ascending)
 	{
+		for (int i = 1; i < size; i++) {
+			int key = array[i];
+			int j = i - 1;
+			if (ascending) {
+				while (key < array[j] && j >= 0) {
+					array[j + 1] = array[j];
+					--j;
+				}
+
+			}
+			else {
+				while (key > array[j] && j >= 0) {
+					array[j + 1] = array[j];
+					--j;
+				}
+			}
+			array[j + 1] = key;
+		}
 	}
 
 	void MergeSort()
